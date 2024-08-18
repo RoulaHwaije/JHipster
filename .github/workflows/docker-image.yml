@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: roula997/jhipstertask:latest
+          tags: roula997/jhipstertask:testroula
