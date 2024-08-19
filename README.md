@@ -5,8 +5,8 @@
 3. Create a new directory and go into it: mkdir myApp && cd myApp
 4. Run JHipster and follow instructions on screen jhipster
 5. Create entity: jhipster entity Task & Define Entity Fields
-6. Run the application: mvnw 
-
+6. Run the application: mvnw
+   
 - CI/CD Setup: Set up a GitHub Actions workflow to automatically build the Docker image and push it to Docker Hub on each push to the main branch
 
 1. Create a GitHub Repository (If Not Already Done)
