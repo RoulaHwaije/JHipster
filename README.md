@@ -1,12 +1,11 @@
 - Set up and run the application locally:
 
-Install Java /update to last version/, Git and Node.js
-Install JHipster: npm install -g generator-jhipster
-Create a new directory and go into it: mkdir myApp && cd myApp
-Run JHipster and follow instructions on screen jhipster
-Create entity: jhipster entity Task 
-Define Entity Fields
-Run the application: mvnw 
+1. Install Java /update to last version/, Git and Node.js
+2. Install JHipster: npm install -g generator-jhipster
+3. Create a new directory and go into it: mkdir myApp && cd myApp
+4. Run JHipster and follow instructions on screen jhipster
+5. Create entity: jhipster entity Task & Define Entity Fields
+6. Run the application: mvnw 
 
 - CI/CD Setup: Set up a GitHub Actions workflow to automatically build the Docker image and push it to Docker Hub on each push to the main branch
 
@@ -15,14 +14,13 @@ Run the application: mvnw
 Once signed in, create a new repository where your Docker image will be pushed.
 3. Add Docker Hub Credentials to GitHub Secrets:
 GitHub Actions need your Docker Hub credentials to push the Docker image. These credentials are stored as secrets in your GitHub repository:
-Go to your GitHub repository.
-Navigate to Settings > Secrets and variables > Actions. Click "New repository secret."
+Go to your GitHub repository and Navigate to Settings > Secrets and variables > Actions. Click "New repository secret."
 Add two secrets:
     Name: DOCKER_USERNAME
     Value: Your Docker Hub username
     Name: DOCKER_PASSWORD
     Value: Your Docker Hub password or access token
-4. Create a GitHub Actions Workflow:
+5. Create a GitHub Actions Workflow:
 Create a workflow file in your project to define the steps for building and pushing the Docker image:
     A. Inside your project directory, create a new directory for GitHub Actions workflows: .github/workflows
     B. Create a new file called docker-image.yml inside this directory: .github/workflows/docker-image.yml
