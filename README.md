@@ -11,7 +11,7 @@ Run the application: mvnw
 - CI/CD Setup: Set up a GitHub Actions workflow to automatically build the Docker image and push it to Docker Hub on each push to the main branch
 
 1. Create a GitHub Repository (If Not Already Done)
-2. Create a Docker Hub Account (If Not Already Done):
+2. Create a Docker Hub Account (If Not Already Done)
 Once signed in, create a new repository where your Docker image will be pushed.
 3. Add Docker Hub Credentials to GitHub Secrets:
 GitHub Actions need your Docker Hub credentials to push the Docker image. These credentials are stored as secrets in your GitHub repository:
@@ -22,12 +22,13 @@ Add two secrets:
     Value: Your Docker Hub username
     Name: DOCKER_PASSWORD
     Value: Your Docker Hub password or access token
-4. Create a GitHub Actions Workflow
+4. Create a GitHub Actions Workflow:
 Create a workflow file in your project to define the steps for building and pushing the Docker image:
     A. Inside your project directory, create a new directory for GitHub Actions workflows: .github/workflows
     B. Create a new file called docker-image.yml inside this directory: .github/workflows/docker-image.yml
     C. Add the following content to the docker-image.yml file:
- 
+   
+ ```
  name: Build and Push Docker Image
 
 on:
@@ -58,9 +59,9 @@ jobs:
           context: .
           push: true
           tags: your-dockerhub-username/your-app-name:latest
-
+```
 Replace your-dockerhub-username/your-app-name with your Docker Hub username and the name of your Docker repository.
-in my project: roula997/jhipstertask:latest
+In my project: roula997/jhipstertask:latest
 
 5. Commit and Push the Workflow:
 Commit and push the workflow file to your GitHub repository:
